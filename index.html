@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>tsxnine aka 369</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#000;
+color:#fff;
+overflow-x:hidden;
+overflow-y:hidden; /* blokuje scroll */
+scroll-behavior:smooth;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+/* ================= INTRO SCREEN ================= */
+
+#intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+animation:fadeOut 2s ease 2.5s forwards;
+}
+
+#intro img{
+width:140px;
+opacity:0;
+animation:logoFade 2s ease forwards;
+}
+
+@keyframes logoFade{
+0%{opacity:0;transform:scale(.9)}
+100%{opacity:1;transform:scale(1)}
+}
+
+@keyframes fadeOut{
+to{
+opacity:0;
+visibility:hidden;
+}
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main{
+opacity:0;
+animation:showContent 1.5s ease 3s forwards;
+}
+
+@keyframes showContent{
+to{
+opacity:1;
+}
+}
+
+/* ================= HEADER ================= */
+
+header{
+padding:60px 20px 20px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:42px;
+font-weight:600;
+letter-spacing:4px;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+nav a{
+font-size:16px;
+position:relative;
+padding:5px 0;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+width:0;
+height:1px;
+left:0;
+bottom:-3px;
+background:white;
+transition:.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* ================= GRID ================= */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+background:#050505;
+border-radius:10px;
+overflow:hidden;
+transition:.4s;
+cursor:pointer;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px rgba(255,255,255,0.1);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-weight:600;
+}
+
+.card p{
+font-size:14px;
+opacity:.7;
+line-height:1.5;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+text-align:center;
+padding:80px 20px;
+font-size:14px;
+opacity:.6;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+nav{
+gap:20px;
+}
+
+.container{
+padding:60px 20px;
+}
+
+}
+
+/* ================= REWARD CARD ================= */
+
+.reward-card-wrapper{
+  display:flex;
+  flex-direction: column;  /* karty jedna pod drugą */
+  justify-content:center;
+  align-items:center;
+  padding:20px 10px;       /* zmniejszony odstęp góra/dół */
+  gap:20px;                 /* dodany odstęp między kartami */
+}
+
+.reward-card{
+position:relative;
+background:#111;
+border-radius:12px;
+display:flex;
+align-items:center;
+padding:25px 60px;
+max-width:850px;
+width:100%;
+gap:35px;
+transition:0.3s;
+overflow:hidden;
+}
+
+/* animowana linia */
+
+.reward-card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:linear-gradient(
+0deg,
+transparent,
+transparent,
+var(--border-color),
+transparent,
+transparent
+);
+animation:borderRotate 4s linear infinite;
+z-index:0;
+}
+
+@keyframes borderRotate{
+0%{
+transform:rotate(0deg);
+}
+100%{
+transform:rotate(360deg);
+}
+}
+
+.reward-card-wrapper{
+--border-color:#0c94d3;
+}
+
+.reward-card-alt3{
+--border-color:#ffa600;
+}
+
+.reward-card-alt{
+--border-color:#ffe600;
+}
+
+.reward-card-alt2{
+--border-color:#00ff15;
+}
+
+/* maska środka */
+
+.reward-card::after{
+content:"";
+position:absolute;
+inset:2px;
+background:#111;
+border-radius:10px;
+z-index:1;
+}
+
+/* zawartość nad animacją */
+
+.reward-card > *{
+position:relative;
+z-index:2;
+}
+
+@keyframes borderRun{
+0%{background-position:0% 50%;}
+100%{background-position:300% 50%;}
+}
+
+.reward-card:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 30px rgba(255,255,255,0.2);
+}
+
+.reward-card-icon img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
+.reward-card-text h3{
+  font-size:24px;
+  margin-bottom:8px;
+  font-weight:600;
+}
+
+.reward-card-text p{
+  font-size:16px;
+  opacity:0.8;
+  margin:0;
+}
+
+.reward-card-button{
+  margin-left:auto;
+  background:#0c94d3;
+  color:#000;
+  font-weight:600;
+  padding:12px 22px;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.reward-card-button:hover{
+  background:#0dabd3;
+}
+
+/* ================= ALTERNATE REWARD CARDS ================= */
+
+.reward-card-alt .reward-card-button{
+  background:#ffe600;  /* nowy kolor przycisku */
+  color:#fff;
+}
+
+.reward-card-alt .reward-card-button:hover{
+  background:#ccbe00;  /* ciemniejszy odcień przy najechaniu */
+}
+
+.reward-card-alt2 .reward-card-button{
+  background:#00ff15;  /* nowy kolor przycisku */
+  color:#fff;
+}
+
+.reward-card-alt2 .reward-card-button:hover{
+  background:#07cc00;  /* ciemniejszy odcień przy najechaniu */
+}
+
+.reward-card-alt3 .reward-card-button{
+  background:#ffa600;  /* nowy kolor przycisku */
+  color:#fff;
+}
+
+.reward-card-alt3 .reward-card-button:hover{
+  background:#cc6d00;  /* ciemniejszy odcień przy najechaniu */
+}
+
+        .section-separator {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 1rem 0 0.5rem;
+            padding: 0;
+            width: 100%;
+        }
+
+        .separator-line {
+            height: 2px;
+            flex-grow: 1;
+            background: linear-gradient(90deg, transparent, rgba(239, 243, 241, 0.3), transparent);
+        }
+
+        .separator-text {
+            font-weight: 900;
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #e9f3ee;
+            opacity: 0.9;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 640px) {
+            .separator-text {
+                font-size: 0.7rem;
+                letter-spacing: 0.6em;
+            }
+        }
+
+                .live-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 900;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: dot-pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes dot-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.5; }
+        }
+
+        /* ================= STREAM ================= */
+
+.stream-card-wrapper{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:60px 20px;
+}
+
+.stream-card{
+width:100%;
+max-width:1100px;
+aspect-ratio:16/9;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 0 35px rgba(0,0,0,0.6);
+margin-top:10px;
+
+border:1px solid rgba(255,255,255,0.25); /* cienka biała ramka */
+}
+
+.stream-card iframe{
+width:100%;
+height:100%;
+border:0;
+}
+
+.platform-btn{
+margin-top:20px;
+background:#53fc18;
+color:#000;
+font-weight:600;
+padding:12px 24px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.platform-btn:hover{
+background:#40d813;
+}
+
+.logo{
+width:130px;
+margin:auto;
+display:block;
+opacity:0.95;
+transition:0.3s;
+}
+
+.logo:hover{
+opacity:1;
+transform:scale(1.05);
+}
+
+.social-nav{
+display:flex;
+justify-content:center;
+gap:35px;
+margin-top:30px;
+}
+
+.social{
+font-size:26px;
+color:white;
+transition:0.3s;
+}
+
+/* hover kolory */
+
+.youtube:hover{
+color:#ff0000;
+}
+
+.twitch:hover{
+color:#9146ff;
+}
+
+.kick:hover{
+color:#53fc18;
+}
+
+.twitter:hover{
+color:#1da1f2;
+}
+
+.instagram:hover{
+color:#e1306c;
+}
+
+.discord:hover{
+color:#5865F2;
+}
+
+.reward-buttons{
+display:flex;
+gap:10px;
+margin-left:auto;
+}
+
+.second-btn{
+background:#0ad390;
+color:#000;
+}
+
+.second-btn:hover{
+background:#05c088;
+}
+
+             .creator-badge {
+            position: fixed;
+            right: 12px;
+            bottom: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 10px;
+            background: rgba(30, 30, 30, 0.95);
+            color: #fff;
+            font-size: 11px;
+            font-family: system-ui, sans-serif;
+            text-decoration: none;
+            border-radius: 999px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            transition: transform 0.15s ease;
+            z-index: 9999;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        @media (min-width: 768px) {
+            .creator-badge {
+                right: 16px;
+                bottom: 16px;
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+        }
+
+        .creator-badge .arrow {
+            font-size: 10px;
+            opacity: 0.8;
+        }
+
+/* ================= BIG REWARD FRAME ================= */
+
+.big-reward-wrapper{
+display:flex;
+justify-content:center;
+padding:40px 20px;
+--border-color:#f5f5f5;
+}
+
+.big-reward-card{
+position:relative;
+background:#111;
+border-radius:12px;
+max-width:900px;
+width:100%;
+padding:35px;
+overflow:hidden;
+}
+
+/* animowana ramka jak reward-card */
+
+.big-reward-card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:linear-gradient(
+0deg,
+transparent,
+transparent,
+var(--border-color),
+transparent,
+transparent
+);
+animation:borderRotate 4s linear infinite;
+z-index:0;
+}
+
+.big-reward-card::after{
+content:"";
+position:absolute;
+inset:2px;
+background:#111;
+border-radius:10px;
+z-index:1;
+}
+
+.big-reward-card > *{
+position:relative;
+z-index:2;
+}
+
+/* tytuł */
+
+.big-reward-title{
+text-align:center;
+font-size:24px;
+margin-bottom:25px;
+font-weight:600;
+}
+
+/* grid zdjęć */
+
+.big-reward-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.big-reward-grid img{
+width:100%;
+height:110px;
+object-fit:cover;
+border-radius:8px;
+transition:0.3s;
+}
+
+.big-reward-grid img:hover{
+transform:scale(1.05);
+}
+
+/* przycisk */
+
+.big-reward-btn{
+display:block;
+text-align:center;
+background:#c5cbce;
+color:#000;
+font-weight:700;
+padding:16px;
+border-radius:10px;
+font-size:18px;
+transition:0.3s;
+}
+
+.big-reward-btn:hover{
+background:#e1e5e6;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.big-reward-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.big-reward-grid img{
+height:95px;
+}
+
+}
+
+/* ================= REWARD GRID ================= */
+
+.reward-gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+margin-bottom:30px;
+}
+
+.reward-item{
+background:#0a0a0a;
+border-radius:10px;
+padding:12px;
+border:1px solid rgba(255,255,255,0.08);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+transition:0.3s;
+}
+
+.reward-item:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(12,148,211,0.3);
+}
+
+.reward-item img{
+width:100%;
+height:80px;
+object-fit:contain;
+margin-bottom:8px;
+}
+
+.reward-item span{
+font-size:13px;
+opacity:0.8;
+font-weight:500;
+}
+
+.reward-item:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(12,148,211,0.3);
+}
+
+.reward-item img{
+width:100%;
+height:80px;
+object-fit:contain;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+.reward-gallery{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+/* ================= WSPÓŁPRACE MOBILE FIX ================= */
+
+@media(max-width:768px){
+
+.reward-card{
+flex-direction:column;
+align-items:center;
+text-align:center;
+padding:25px 20px;
+gap:18px;
+}
+
+.reward-card-icon img{
+width:70px;
+height:70px;
+}
+
+.reward-card-text h3{
+font-size:20px;
+}
+
+.reward-card-text p{
+font-size:14px;
+}
+
+.reward-buttons{
+margin-left:0;
+flex-direction:column;
+width:100%;
+}
+
+.reward-card-button{
+margin-left:0;
+width:100%;
+text-align:center;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO SCREEN -->
+
+<div id="intro">
+<img src="logo.png" alt="logo">
+</div>
+
+
+<div class="main">
+
+<header>
+
+<img src="logo.png" class="logo">
+
+<nav class="social-nav">
+
+  <a href="https://kick.com/tsxnine" class="social kick">
+<i class="fa-solid fa-play"></i>
+</a>
+
+<a href="https://www.twitch.tv/tsxnine" class="social twitch">
+<i class="fab fa-twitch"></i>
+</a>
+
+<a href="https://www.instagram.com/tsxnine_" class="social instagram">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://discord.gg/sW8wnAa8QA" class="social discord">
+<i class="fab fa-discord"></i>
+</a>
+
+<a href="https://x.com/tsxnine" class="social twitter">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+
+</nav>
+
+</header>
+
+        <div id="sec-live" class="section-separator">
+            <div class="separator-line"></div>
+            <span class="separator-text">Współprace</span>
+            <div class="separator-line"></div>
+        </div>
+<!-- Dodaj to wewnątrz <body> przed <footer> -->
+
+<div class="reward-card-wrapper">
+  <div class="reward-card">
+    <div class="reward-card-icon">
+      <img src="csgoskins.png" alt="Nagrody">
+    </div>
+    <div class="reward-card-text">
+      <h3>CSGOSKINS</h3>
+      <p>10% do wpłaty & 2.10zł na start!</p>
+    </div>
+    <div class="reward-buttons">
+  <a href="https://csgo-skins.com/?ref=369" class="reward-card-button">PRZEJDŹ →</a>
+</div>
+  </div>
+</div>
+
+<div class="reward-card-wrapper reward-card-alt3">
+  <div class="reward-card">
+    <div class="reward-card-icon">
+      <img src="pirate.png" alt="Nagrody">
+    </div>
+    <div class="reward-card-text">
+      <h3>PIRATESWAP</h3>
+      <p>35% do doładowania!</p>
+    </div>
+    <a href="https://pirateswap.com/pl?ref=369" class="reward-card-button">PRZEJDŹ →</a>
+  </div>
+</div>
+
+<div class="reward-card-wrapper reward-card-alt">
+  <div class="reward-card">
+    <div class="reward-card-icon">
+      <img src="holy.png" alt="Nagrody">
+    </div>
+    <div class="reward-card-text">
+      <h3>HOLY</h3>
+      <p></p>
+    </div>
+    <a href="#" class="reward-card-button">PRZEJDŹ →</a>
+  </div>
+</div>
+
+<div class="reward-card-wrapper reward-card-alt2">
+  <div class="reward-card">
+    <div class="reward-card-icon">
+      <img src="kicklogo.png" alt="Nagrody">
+    </div>
+    <div class="reward-card-text">
+      <h3>Streamy na Kicku codziennie!</h3>
+      <p>Zdobywaj punkty za oglądanie i wymieniaj je na nagrody!</p>
+    </div>
+    <a href="https://kick.com/tsxnine" class="reward-card-button">PRZEJDŹ →</a>
+  </div>
+</div>
+
+        <div id="sec-live" class="section-separator">
+            <div class="separator-line"></div>
+            <span class="separator-text">Skiny na Giveaway</span>
+            <div class="separator-line"></div>
+        </div>
+
+<div class="big-reward-wrapper">
+
+<div class="big-reward-card">
+
+<div class="big-reward-title">
+NAGRODY DO WYGRANIA
+</div>
+
+<div class="reward-gallery">
+
+<div class="reward-item">
+<img src="skin1.png">
+<span>M4A1-S | Cyrex</span>
+</div>
+
+<div class="reward-item">
+<img src="skin1.png">
+<span>AK-47 | Redline</span>
+</div>
+
+<div class="reward-item">
+<img src="skin1.png">
+<span>AWP | Asiimov</span>
+</div>
+
+<div class="reward-item">
+<img src="skin1.png">
+<span>USP-S | Kill Confirmed</span>
+</div>
+
+<div class="reward-item">
+<img src="skin1.png">
+<span>Karambit | Doppler</span>
+</div>
+
+<div class="reward-item">
+<img src="skin1.png">
+<span>Glock | Fade</span>
+</div>
+
+<div class="reward-item">
+<img src="skin1.png">
+<span>M4A4 | Desolate Space</span>
+</div>
+
+<div class="reward-item">
+<img src="skin1.png">
+<span>AWP | Neo-Noir</span>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+        <div id="sec-live" class="section-separator">
+            <div class="separator-line"></div>
+            <span class="separator-text">Live</span>
+            <div class="separator-line"></div>
+        </div>
+
+
+        <div class="stream-card-wrapper">
+            <div class="live-status" style="color: #53fc18;">
+                <div class="dot" style="background: #53fc18; box-shadow: 0 0 8px #53fc18;"></div>
+                KICK LIVE
+            </div>
+            <div class="stream-card">
+                <iframe src="https://player.kick.com/tsxnine" allowfullscreen="true" title="Kick Stream"></iframe>
+            </div>
+            <a href="https://kick.com/tsxnine" target="_blank" class="platform-btn">OTWÓRZ KICK/TSXNINE</a>
+        </div>
+    </div>
+                  <!-- essence tag-->
+        <a href="https://essenceagency.pl" target="_blank" class="creator-badge">
+        stworzone przez <strong>ESSENCE</strong>
+        <span class="arrow">↗</span>
+    </a>
+
+<footer>
+© 2026 tsxnine
+</footer>
+
+</div>
+
+<script>
+
+setTimeout(function(){
+document.body.style.overflowY = "auto";
+}, 3000);
+
+</script>
+</body>
+</html>
