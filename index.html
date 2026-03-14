@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>tsxnine aka 369</title>
+<title>tsxnine</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -689,6 +689,30 @@ height:95px;
 
 }
 
+/* ================= DOUBLE REWARD LAYOUT ================= */
+
+.double-reward-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+align-items:start;
+}
+
+.double-reward-section .big-reward-wrapper{
+padding:0;
+}
+
+/* mobile */
+
+@media(max-width:900px){
+.double-reward-section{
+grid-template-columns:1fr;
+}
+}
+
 /* ================= REWARD GRID ================= */
 
 .reward-gallery{
@@ -894,12 +918,13 @@ text-align:center;
 
         <div id="sec-live" class="section-separator">
             <div class="separator-line"></div>
-            <span class="separator-text">Skiny na Giveaway</span>
+            <span class="separator-text">Nagrody do zdobycia</span>
             <div class="separator-line"></div>
         </div>
 
-<div class="big-reward-wrapper">
+<div class="double-reward-section">
 
+<div class="big-reward-wrapper">
 <div class="big-reward-card">
 
 <div class="big-reward-title">
@@ -951,6 +976,9 @@ NAGRODY DO WYGRANIA
 </div>
 </div>
 
+</div>
+<div class="botrix-leaderboard">
+  <iframe src="https://botrix.live/k/tsxnine/leaderboard" style="width:100%;height:450px;border:none;"></iframe>
 </div>
 </div>
 
