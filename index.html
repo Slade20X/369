@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>tsxnine</title>
+<title>Tsxnine</title>
 
+<link rel="icon" type="image/png" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -439,6 +440,41 @@ justify-content:center;
 padding:60px 20px;
 }
 
+.stream-layout{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:20px;
+width:100%;
+max-width:1200px;
+}
+
+.chat-card{
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 0 35px rgba(0,0,0,0.6);
+border:1px solid rgba(255,255,255,0.25);
+background:#0b0b0b;
+height:100%;
+}
+
+.chat-card iframe{
+width:100%;
+height:100%;
+border:0;
+}
+
+/* mobile */
+
+@media(max-width:900px){
+.stream-layout{
+grid-template-columns:1fr;
+}
+
+.chat-card{
+height:400px;
+}
+}
+
 .stream-card{
 width:100%;
 max-width:1100px;
@@ -450,6 +486,8 @@ margin-top:10px;
 
 border:1px solid rgba(255,255,255,0.25); /* cienka biała ramka */
 }
+
+
 
 .stream-card iframe{
 width:100%;
@@ -810,6 +848,73 @@ text-align:center;
 }
 
 }
+
+.social-icon{
+width:26px;
+height:26px;
+object-fit:contain;
+filter:brightness(0) invert(1);
+transition:0.3s;
+}
+
+.social-icon:hover{
+transform:scale(1.1);
+}
+
+.reward-item{
+position:relative;
+background:#0a0a0a;
+border-radius:10px;
+padding:12px;
+border:1px solid rgba(255,255,255,0.08);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+transition:0.3s;
+overflow:hidden;
+}
+
+/* cena */
+
+.skin-price{
+position:absolute;
+bottom:8px;
+right:8px;
+background:rgba(0,0,0,0.8);
+padding:4px 8px;
+border-radius:6px;
+font-size:12px;
+font-weight:600;
+color:#53fc18;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+/* etykieta WYLOSOWANE */
+
+.won-label{
+position:absolute;
+top:16px;
+left:-35px;
+width:140px;
+text-align:center;
+transform:rotate(-45deg);
+background:#ff0033;
+color:white;
+font-size:10px;
+font-weight:700;
+padding:6px 0;
+letter-spacing:1px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+/* lekko przyciemniony skin */
+
+.reward-item.won img{
+opacity:0.5;
+filter:grayscale(40%);
+}
 </style>
 </head>
 
@@ -830,8 +935,8 @@ text-align:center;
 
 <nav class="social-nav">
 
-  <a href="https://kick.com/tsxnine" class="social kick">
-<i class="fa-solid fa-play"></i>
+<a href="https://kick.com/tsxnine" class="social kick">
+<img src="kick2.png" class="social-icon">
 </a>
 
 <a href="https://www.twitch.tv/tsxnine" class="social twitch">
@@ -899,7 +1004,7 @@ text-align:center;
       <h3>HOLY</h3>
       <p></p>
     </div>
-    <a href="#" class="reward-card-button">PRZEJDŹ →</a>
+    <a href="http://pl.weareholy.com/369" class="reward-card-button">PRZEJDŹ →</a>
   </div>
 </div>
 
@@ -933,45 +1038,50 @@ NAGRODY DO WYGRANIA
 
 <div class="reward-gallery">
 
-<div class="reward-item">
-<img src="skin1.png">
-<span>M4A1-S | Cyrex</span>
+<div class="reward-item won">
+<img src="surv.png">
+<span>Survival Knife</span>
+<div class="skin-price">440zł</div>
+<div class="won-label">WYLOSOWANE</div>
 </div>
 
 <div class="reward-item">
-<img src="skin1.png">
-<span>AK-47 | Redline</span>
+<img src="glove2.png">
+<span>Rękawice 3rd Commando</span>
+<div class="skin-price">480zł</div>
+<div class="won-label">WYLOSOWANE</div>
 </div>
 
 <div class="reward-item">
-<img src="skin1.png">
-<span>AWP | Asiimov</span>
+<img src="glove.png">
+<span>Rękawice Imperial Plaid</span>
+<div class="skin-price">1600zł</div>
 </div>
 
 <div class="reward-item">
-<img src="skin1.png">
-<span>USP-S | Kill Confirmed</span>
+<img src="bowie.png">
+<span>Bowie Autotronic</span>
+<div class="skin-price">625zł</div>
 </div>
 
 <div class="reward-item">
-<img src="skin1.png">
-<span>Karambit | Doppler</span>
+<img src="gut.png">
+<span>Gut Knie Lore</span>
+<div class="skin-price">578zł</div>
 </div>
 
 <div class="reward-item">
-<img src="skin1.png">
-<span>Glock | Fade</span>
+<img src="aqua.png">
+<span>AK-47 Aquamarine</span>
+<div class="skin-price">244zł</div>
 </div>
 
 <div class="reward-item">
-<img src="skin1.png">
-<span>M4A4 | Desolate Space</span>
+<img src="hunt.png">
+<span>Huntsman DDPAT</span>
+<div class="skin-price">400zł</div>
 </div>
 
-<div class="reward-item">
-<img src="skin1.png">
-<span>AWP | Neo-Noir</span>
-</div>
 
 </div>
 </div>
@@ -990,17 +1100,15 @@ NAGRODY DO WYGRANIA
         </div>
 
 
-        <div class="stream-card-wrapper">
-            <div class="live-status" style="color: #53fc18;">
-                <div class="dot" style="background: #53fc18; box-shadow: 0 0 8px #53fc18;"></div>
-                KICK LIVE
-            </div>
-            <div class="stream-card">
-                <iframe src="https://player.kick.com/tsxnine" allowfullscreen="true" title="Kick Stream"></iframe>
-            </div>
-            <a href="https://kick.com/tsxnine" target="_blank" class="platform-btn">OTWÓRZ KICK/TSXNINE</a>
-        </div>
-    </div>
+<div class="stream-card-wrapper">
+  <div class="live-status" style="color: #53fc18;">
+    <div class="dot" style="background: #53fc18; box-shadow: 0 0 8px #53fc18;"></div>
+    KICK LIVE
+  </div>
+  <div class="stream-card">
+    <iframe src="https://player.kick.com/tsxnine" allowfullscreen="true" title="Kick Stream"></iframe>
+  </div>
+</div>
                   <!-- essence tag-->
         <a href="https://essenceagency.pl" target="_blank" class="creator-badge">
         stworzone przez <strong>ESSENCE</strong>
