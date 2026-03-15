@@ -620,6 +620,13 @@ padding:40px 20px;
 --border-color:#f5f5f5;
 }
 
+.big-reward-wrapper2{
+display:flex;
+justify-content:center;
+
+--border-color:#36ec08;
+}
+
 .big-reward-card{
 position:relative;
 background:#111;
@@ -879,16 +886,15 @@ overflow:hidden;
 /* cena */
 
 .skin-price{
-position:absolute;
-bottom:8px;
-right:8px;
-background:rgba(0,0,0,0.8);
-padding:4px 8px;
-border-radius:6px;
-font-size:12px;
-font-weight:600;
-color:#53fc18;
-border:1px solid rgba(255,255,255,0.1);
+position: static; /* zmieniamy z absolute na normalne flow */
+margin-top: 6px;  /* odstęp od obrazka */
+background: rgba(0,0,0,0.8);
+padding: 4px 8px;
+border-radius: 6px;
+font-size: 12px;
+font-weight: 600;
+color: #53fc18;
+border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* etykieta WYLOSOWANE */
@@ -915,6 +921,44 @@ box-shadow:0 0 10px rgba(0,0,0,0.5);
 opacity:0.5;
 filter:grayscale(40%);
 }
+
+/* ================= MEGA REWARD ================= */
+
+.mega-reward{
+position:relative;
+background:#0a0a0a;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.08);
+padding:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+height:320px;
+transition:0.3s;
+overflow:hidden;
+}
+
+.mega-reward:hover{
+transform:translateY(-4px);
+box-shadow:0 0 25px rgba(255,255,255,0.2);
+}
+
+.mega-reward img{
+max-width:80%;
+max-height:200px;
+object-fit:contain;
+margin-bottom:12px;
+}
+
+.mega-reward span{
+font-size:18px;
+font-weight:600;
+margin-bottom:6px;
+}
+
+
 </style>
 </head>
 
@@ -936,7 +980,7 @@ filter:grayscale(40%);
 <nav class="social-nav">
 
 <a href="https://kick.com/tsxnine" class="social kick">
-<img src="kick2.png" class="social-icon">
+<i class="fa-brands fa-kickstarter-k"></i>
 </a>
 
 <a href="https://www.twitch.tv/tsxnine" class="social twitch">
@@ -1033,9 +1077,8 @@ filter:grayscale(40%);
 <div class="big-reward-card">
 
 <div class="big-reward-title">
-NAGRODY DO WYGRANIA
+NAGRODY ZA WPŁATY
 </div>
-
 <div class="reward-gallery">
 
 <div class="reward-item won">
@@ -1046,9 +1089,9 @@ NAGRODY DO WYGRANIA
 </div>
 
 <div class="reward-item">
-<img src="urs.png">
-<span>Ursus Case Hardened</span>
-<div class="skin-price">912zł</div>
+<img src="seke.png">
+<span>Skeleton Crimson Web</span>
+<div class="skin-price">1800zł</div>
 <div class="won-label">WYLOSOWANE</div>
 </div>
 
@@ -1087,8 +1130,20 @@ NAGRODY DO WYGRANIA
 </div>
 
 </div>
-<div class="botrix-leaderboard">
-  <iframe src="https://botrix.live/k/tsxnine/leaderboard" style="width:100%;height:450px;border:none;"></iframe>
+<div class="big-reward-wrapper2">
+<div class="big-reward-card">
+
+<div class="big-reward-title">
+NAGRODA ZA OGLĄDANIE NA KICK
+</div>
+
+<div class="mega-reward">
+<img src="komp.png">
+<span>KOMPUTER za 10 000zł!</span>
+<div class="skin-price">10000zł</div>
+</div>
+
+</div>
 </div>
 </div>
 
