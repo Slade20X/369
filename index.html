@@ -32,7 +32,849 @@ text-decoration:none;
 color:white;
 }
 
-#intro,.reward-card{align-items:center;width:100%}#intro,nav{display:flex}footer,header{text-align:center}.container,footer{padding:80px 20px}.card p,footer{font-size:14px}#intro,.card img,.reward-card,nav a:hover::after{width:100%}.chat-card,.stream-card{overflow:hidden;box-shadow:0 0 35px rgba(0,0,0,.6)}#intro{position:fixed;top:0;left:0;height:100vh;background:#000;justify-content:center;z-index:9999;animation:2s 2.5s forwards fadeOut}#intro img{width:140px;opacity:0;animation:2s forwards logoFade}@keyframes logoFade{0%{opacity:0;transform:scale(.9)}100%{opacity:1;transform:scale(1)}}@keyframes fadeOut{to{opacity:0;visibility:hidden}}.main{opacity:0;animation:1.5s 3s forwards showContent}@keyframes showContent{to{opacity:1}}header{padding:60px 20px 20px}header h1{font-size:42px;font-weight:600;letter-spacing:4px}nav{justify-content:center;gap:40px;margin-top:30px;flex-wrap:wrap}nav a{font-size:16px;position:relative;padding:5px 0}nav a::after{content:"";position:absolute;width:0;height:1px;left:0;bottom:-3px;background:#fff;transition:.3s}.container{max-width:1200px;margin:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}.card{background:#050505;border-radius:10px;overflow:hidden;transition:.4s;cursor:pointer;border:1px solid rgba(255,255,255,.05)}.card:hover{transform:scale(1.05);box-shadow:0 0 25px rgba(255,255,255,.1)}.card img{height:180px;object-fit:cover}.card-content{padding:25px}.card h3{margin-bottom:10px;font-weight:600}.card p{opacity:.7;line-height:1.5}.reveal{opacity:0;transform:translateY(40px);transition:1s}.logo,.platform-btn,.reward-card,.social{transition:.3s}.reveal.active{opacity:1;transform:translateY(0)}footer{opacity:.6}.reward-card-wrapper{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px 10px;gap:20px;--border-color:#0c94d3}.reward-card{position:relative;background:#111;border-radius:12px;display:flex;padding:25px 60px;max-width:850px;gap:35px;overflow:hidden}.big-reward-card::before,.reward-card::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(0deg,transparent,transparent,var(--border-color),transparent,transparent);animation:4s linear infinite borderRotate;z-index:0}@keyframes borderRotate{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.reward-card-alt3{--border-color:#ffa600}.reward-card-alt{--border-color:#ffe600}.reward-card-alt2{--border-color:#00ff15}.big-reward-card::after,.reward-card::after{content:"";position:absolute;inset:2px;background:#111;border-radius:10px;z-index:1}.big-reward-card>*,.reward-card>*{position:relative;z-index:2}@keyframes borderRun{0%{background-position:0 50%}100%{background-position:300% 50%}}.reward-card:hover{transform:scale(1.03);box-shadow:0 0 30px rgba(255,255,255,.2)}.big-reward-grid img:hover,.logo:hover{transform:scale(1.05)}.reward-card-icon img{width:80px;height:80px;object-fit:contain}.reward-card-text h3{font-size:24px;margin-bottom:8px;font-weight:600}.reward-card-text p{font-size:16px;opacity:.8;margin:0}.reward-card-button{margin-left:auto;background:#0c94d3;color:#000;font-weight:600;padding:12px 22px;border-radius:8px;transition:.3s}.live-status,.separator-text{font-weight:900;text-transform:uppercase}.reward-card-button:hover{background:#0dabd3}.reward-card-alt .reward-card-button{background:#ffe600;color:#fff}.reward-card-alt .reward-card-button:hover{background:#ccbe00}.reward-card-alt2 .reward-card-button{background:#00ff15;color:#fff}.reward-card-alt2 .reward-card-button:hover{background:#07cc00}.reward-card-alt3 .reward-card-button{background:#ffa600;color:#fff}.reward-card-alt3 .reward-card-button:hover{background:#cc6d00}.section-separator{grid-column:1/-1;display:flex;align-items:center;gap:.75rem;margin:1rem 0 .5rem;padding:0;width:100%}.separator-line{height:2px;flex-grow:1;background:linear-gradient(90deg,transparent,rgba(239,243,241,.3),transparent)}.separator-text{font-size:.6rem;letter-spacing:.3em;color:#e9f3ee;opacity:.9;white-space:nowrap}@media (min-width:640px){.separator-text{font-size:.7rem;letter-spacing:.6em}}.live-status{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.15em;margin-bottom:.5rem}.dot{width:8px;height:8px;border-radius:50%;animation:1.5s ease-in-out infinite dot-pulse}@keyframes dot-pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.3);opacity:.5}}.stream-card-wrapper{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px}.stream-layout{display:grid;grid-template-columns:2fr 1fr;gap:20px;width:100%;max-width:1200px}.chat-card{border-radius:12px;border:1px solid rgba(255,255,255,.25);background:#0b0b0b;height:100%}.chat-card iframe,.stream-card iframe{width:100%;height:100%;border:0}.stream-card{width:100%;max-width:1100px;aspect-ratio:16/9;border-radius:12px;margin-top:10px;border:1px solid rgba(255,255,255,.25)}.platform-btn{margin-top:20px;background:#53fc18;color:#000;font-weight:600;padding:12px 24px;border-radius:8px}.platform-btn:hover{background:#40d813}.logo{width:130px;margin:auto;display:block;opacity:.95}.logo:hover{opacity:1}.social-nav{display:flex;justify-content:center;gap:35px;margin-top:30px}.social{font-size:26px;color:#fff}.youtube:hover{color:red}.twitch:hover{color:#9146ff}.kick:hover{color:#53fc18}.twitter:hover{color:#1da1f2}.instagram:hover{color:#e1306c}.discord:hover{color:#5865f2}.reward-buttons{display:flex;gap:10px;margin-left:auto}.second-btn{background:#0ad390;color:#000}.second-btn:hover{background:#05c088}.creator-badge{position:fixed;right:12px;bottom:12px;display:inline-flex;align-items:center;gap:4px;padding:6px 10px;background:rgba(30,30,30,.95);color:#fff;font-size:11px;font-family:system-ui,sans-serif;text-decoration:none;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.25);transition:transform .15s;z-index:9999;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}.big-reward-card,.reward-item{position:relative;overflow:hidden}@media (min-width:768px){.creator-badge{right:16px;bottom:16px;padding:8px 12px;font-size:13px}}.creator-badge .arrow{font-size:10px;opacity:.8}.big-reward-wrapper{display:flex;justify-content:center;padding:40px 20px;--border-color:#f5f5f5}.big-reward-card{background:#111;border-radius:12px;max-width:900px;width:100%;padding:35px}.big-reward-btn,.reward-item{border-radius:10px;text-align:center;transition:.3s}.big-reward-title{text-align:center;font-size:24px;margin-bottom:25px;font-weight:600}.big-reward-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:30px}.big-reward-grid img{width:100%;height:110px;object-fit:cover;border-radius:8px;transition:.3s}.reward-item img,.social-icon{object-fit:contain;object-fit:contain}.big-reward-btn{display:block;background:#c5cbce;color:#000;font-weight:700;padding:16px;font-size:18px}.big-reward-btn:hover{background:#e1e5e6}.double-reward-section{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1200px;margin:auto;padding:40px 20px;align-items:start}.double-reward-section .big-reward-wrapper{padding:0}@media(max-width:900px){.double-reward-section,.stream-layout{grid-template-columns:1fr}.chat-card{height:400px}}.reward-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:30px}.reward-item{display:flex;flex-direction:column;align-items:center;justify-content:center}.reward-item img{margin-bottom:8px;width:100%;height:80px}.reward-item span{font-size:13px;opacity:.8;font-weight:500}.reward-item:hover{transform:translateY(-3px);box-shadow:0 0 20px rgba(12,148,211,.3)}@media(max-width:768px){header h1{font-size:30px}nav{gap:20px}.container{padding:60px 20px}.big-reward-grid,.reward-gallery{grid-template-columns:repeat(2,1fr)}.big-reward-grid img{height:95px}.reward-card{flex-direction:column;align-items:center;text-align:center;padding:25px 20px;gap:18px}.reward-card-icon img{width:70px;height:70px}.reward-card-text h3{font-size:20px}.reward-card-text p{font-size:14px}.reward-buttons{margin-left:0;flex-direction:column;width:100%}.reward-card-button{margin-left:0;width:100%;text-align:center}}.social-icon{width:26px;height:26px;filter:brightness(0) invert(1);transition:.3s}.social-icon:hover{transform:scale(1.1)}.reward-item{background:#0a0a0a;padding:12px;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:center;justify-content:center}
+/* ================= INTRO SCREEN ================= */
+
+#intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+animation:fadeOut 2s ease 2.5s forwards;
+}
+
+#intro img{
+width:140px;
+opacity:0;
+animation:logoFade 2s ease forwards;
+}
+
+@keyframes logoFade{
+0%{opacity:0;transform:scale(.9)}
+100%{opacity:1;transform:scale(1)}
+}
+
+@keyframes fadeOut{
+to{
+opacity:0;
+visibility:hidden;
+}
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main{
+opacity:0;
+animation:showContent 1.5s ease 3s forwards;
+}
+
+@keyframes showContent{
+to{
+opacity:1;
+}
+}
+
+/* ================= HEADER ================= */
+
+header{
+padding:60px 20px 20px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:42px;
+font-weight:600;
+letter-spacing:4px;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+nav a{
+font-size:16px;
+position:relative;
+padding:5px 0;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+width:0;
+height:1px;
+left:0;
+bottom:-3px;
+background:white;
+transition:.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* ================= GRID ================= */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+background:#050505;
+border-radius:10px;
+overflow:hidden;
+transition:.4s;
+cursor:pointer;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px rgba(255,255,255,0.1);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-content{
+padding:25px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-weight:600;
+}
+
+.card p{
+font-size:14px;
+opacity:.7;
+line-height:1.5;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+text-align:center;
+padding:80px 20px;
+font-size:14px;
+opacity:.6;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+nav{
+gap:20px;
+}
+
+.container{
+padding:60px 20px;
+}
+
+}
+
+/* ================= REWARD CARD ================= */
+
+.reward-card-wrapper{
+  display:flex;
+  flex-direction: column;  /* karty jedna pod drugą */
+  justify-content:center;
+  align-items:center;
+  padding:20px 10px;       /* zmniejszony odstęp góra/dół */
+  gap:20px;                 /* dodany odstęp między kartami */
+}
+
+.reward-card{
+position:relative;
+background:#111;
+border-radius:12px;
+display:flex;
+align-items:center;
+padding:25px 60px;
+max-width:850px;
+width:100%;
+gap:35px;
+transition:0.3s;
+overflow:hidden;
+}
+
+/* animowana linia */
+
+.reward-card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:linear-gradient(
+0deg,
+transparent,
+transparent,
+var(--border-color),
+transparent,
+transparent
+);
+animation:borderRotate 4s linear infinite;
+z-index:0;
+}
+
+@keyframes borderRotate{
+0%{
+transform:rotate(0deg);
+}
+100%{
+transform:rotate(360deg);
+}
+}
+
+.reward-card-wrapper{
+--border-color:#0c94d3;
+}
+
+.reward-card-alt3{
+--border-color:#ffa600;
+}
+
+.reward-card-alt{
+--border-color:#ffe600;
+}
+
+.reward-card-alt2{
+--border-color:#00ff15;
+}
+
+/* maska środka */
+
+.reward-card::after{
+content:"";
+position:absolute;
+inset:2px;
+background:#111;
+border-radius:10px;
+z-index:1;
+}
+
+/* zawartość nad animacją */
+
+.reward-card > *{
+position:relative;
+z-index:2;
+}
+
+@keyframes borderRun{
+0%{background-position:0% 50%;}
+100%{background-position:300% 50%;}
+}
+
+.reward-card:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 30px rgba(255,255,255,0.2);
+}
+
+.reward-card-icon img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
+.reward-card-text h3{
+  font-size:24px;
+  margin-bottom:8px;
+  font-weight:600;
+}
+
+.reward-card-text p{
+  font-size:16px;
+  opacity:0.8;
+  margin:0;
+}
+
+.reward-card-button{
+  margin-left:auto;
+  background:#0c94d3;
+  color:#000;
+  font-weight:600;
+  padding:12px 22px;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.reward-card-button:hover{
+  background:#0dabd3;
+}
+
+/* ================= ALTERNATE REWARD CARDS ================= */
+
+.reward-card-alt .reward-card-button{
+  background:#ffe600;  /* nowy kolor przycisku */
+  color:#fff;
+}
+
+.reward-card-alt .reward-card-button:hover{
+  background:#ccbe00;  /* ciemniejszy odcień przy najechaniu */
+}
+
+.reward-card-alt2 .reward-card-button{
+  background:#00ff15;  /* nowy kolor przycisku */
+  color:#fff;
+}
+
+.reward-card-alt2 .reward-card-button:hover{
+  background:#07cc00;  /* ciemniejszy odcień przy najechaniu */
+}
+
+.reward-card-alt3 .reward-card-button{
+  background:#ffa600;  /* nowy kolor przycisku */
+  color:#fff;
+}
+
+.reward-card-alt3 .reward-card-button:hover{
+  background:#cc6d00;  /* ciemniejszy odcień przy najechaniu */
+}
+
+        .section-separator {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 1rem 0 0.5rem;
+            padding: 0;
+            width: 100%;
+        }
+
+        .separator-line {
+            height: 2px;
+            flex-grow: 1;
+            background: linear-gradient(90deg, transparent, rgba(239, 243, 241, 0.3), transparent);
+        }
+
+        .separator-text {
+            font-weight: 900;
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #e9f3ee;
+            opacity: 0.9;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 640px) {
+            .separator-text {
+                font-size: 0.7rem;
+                letter-spacing: 0.6em;
+            }
+        }
+
+                .live-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 900;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5rem;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: dot-pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes dot-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.5; }
+        }
+
+        /* ================= STREAM ================= */
+
+.stream-card-wrapper{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:60px 20px;
+}
+
+.stream-layout{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:20px;
+width:100%;
+max-width:1200px;
+}
+
+.chat-card{
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 0 35px rgba(0,0,0,0.6);
+border:1px solid rgba(255,255,255,0.25);
+background:#0b0b0b;
+height:100%;
+}
+
+.chat-card iframe{
+width:100%;
+height:100%;
+border:0;
+}
+
+/* mobile */
+
+@media(max-width:900px){
+.stream-layout{
+grid-template-columns:1fr;
+}
+
+.chat-card{
+height:400px;
+}
+}
+
+.stream-card{
+width:100%;
+max-width:1100px;
+aspect-ratio:16/9;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 0 35px rgba(0,0,0,0.6);
+margin-top:10px;
+
+border:1px solid rgba(255,255,255,0.25); /* cienka biała ramka */
+}
+
+
+
+.stream-card iframe{
+width:100%;
+height:100%;
+border:0;
+}
+
+.platform-btn{
+margin-top:20px;
+background:#53fc18;
+color:#000;
+font-weight:600;
+padding:12px 24px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.platform-btn:hover{
+background:#40d813;
+}
+
+.logo{
+width:130px;
+margin:auto;
+display:block;
+opacity:0.95;
+transition:0.3s;
+}
+
+.logo:hover{
+opacity:1;
+transform:scale(1.05);
+}
+
+.social-nav{
+display:flex;
+justify-content:center;
+gap:35px;
+margin-top:30px;
+}
+
+.social{
+font-size:26px;
+color:white;
+transition:0.3s;
+}
+
+/* hover kolory */
+
+.youtube:hover{
+color:#ff0000;
+}
+
+.twitch:hover{
+color:#9146ff;
+}
+
+.kick:hover{
+color:#53fc18;
+}
+
+.twitter:hover{
+color:#1da1f2;
+}
+
+.instagram:hover{
+color:#e1306c;
+}
+
+.discord:hover{
+color:#5865F2;
+}
+
+.reward-buttons{
+display:flex;
+gap:10px;
+margin-left:auto;
+}
+
+.second-btn{
+background:#0ad390;
+color:#000;
+}
+
+.second-btn:hover{
+background:#05c088;
+}
+
+             .creator-badge {
+            position: fixed;
+            right: 12px;
+            bottom: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 10px;
+            background: rgba(30, 30, 30, 0.95);
+            color: #fff;
+            font-size: 11px;
+            font-family: system-ui, sans-serif;
+            text-decoration: none;
+            border-radius: 999px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            transition: transform 0.15s ease;
+            z-index: 9999;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        @media (min-width: 768px) {
+            .creator-badge {
+                right: 16px;
+                bottom: 16px;
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+        }
+
+        .creator-badge .arrow {
+            font-size: 10px;
+            opacity: 0.8;
+        }
+
+/* ================= BIG REWARD FRAME ================= */
+
+.big-reward-wrapper{
+display:flex;
+justify-content:center;
+padding:40px 20px;
+--border-color:#f5f5f5;
+}
+
+.big-reward-card{
+position:relative;
+background:#111;
+border-radius:12px;
+max-width:900px;
+width:100%;
+padding:35px;
+overflow:hidden;
+}
+
+/* animowana ramka jak reward-card */
+
+.big-reward-card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:linear-gradient(
+0deg,
+transparent,
+transparent,
+var(--border-color),
+transparent,
+transparent
+);
+animation:borderRotate 4s linear infinite;
+z-index:0;
+}
+
+.big-reward-card::after{
+content:"";
+position:absolute;
+inset:2px;
+background:#111;
+border-radius:10px;
+z-index:1;
+}
+
+.big-reward-card > *{
+position:relative;
+z-index:2;
+}
+
+/* tytuł */
+
+.big-reward-title{
+text-align:center;
+font-size:24px;
+margin-bottom:25px;
+font-weight:600;
+}
+
+/* grid zdjęć */
+
+.big-reward-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.big-reward-grid img{
+width:100%;
+height:110px;
+object-fit:cover;
+border-radius:8px;
+transition:0.3s;
+}
+
+.big-reward-grid img:hover{
+transform:scale(1.05);
+}
+
+/* przycisk */
+
+.big-reward-btn{
+display:block;
+text-align:center;
+background:#c5cbce;
+color:#000;
+font-weight:700;
+padding:16px;
+border-radius:10px;
+font-size:18px;
+transition:0.3s;
+}
+
+.big-reward-btn:hover{
+background:#e1e5e6;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.big-reward-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.big-reward-grid img{
+height:95px;
+}
+
+}
+
+/* ================= DOUBLE REWARD LAYOUT ================= */
+
+.double-reward-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+align-items:start;
+}
+
+.double-reward-section .big-reward-wrapper{
+padding:0;
+}
+
+/* mobile */
+
+@media(max-width:900px){
+.double-reward-section{
+grid-template-columns:1fr;
+}
+}
+
+/* ================= REWARD GRID ================= */
+
+.reward-gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+margin-bottom:30px;
+}
+
+.reward-item{
+background:#0a0a0a;
+border-radius:10px;
+padding:12px;
+border:1px solid rgba(255,255,255,0.08);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+transition:0.3s;
+}
+
+.reward-item:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(12,148,211,0.3);
+}
+
+.reward-item img{
+width:100%;
+height:80px;
+object-fit:contain;
+margin-bottom:8px;
+}
+
+.reward-item span{
+font-size:13px;
+opacity:0.8;
+font-weight:500;
+}
+
+.reward-item:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(12,148,211,0.3);
+}
+
+.reward-item img{
+width:100%;
+height:80px;
+object-fit:contain;
+}
+
+/* mobile */
+
+@media(max-width:768px){
+.reward-gallery{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+/* ================= WSPÓŁPRACE MOBILE FIX ================= */
+
+@media(max-width:768px){
+
+.reward-card{
+flex-direction:column;
+align-items:center;
+text-align:center;
+padding:25px 20px;
+gap:18px;
+}
+
+.reward-card-icon img{
+width:70px;
+height:70px;
+}
+
+.reward-card-text h3{
+font-size:20px;
+}
+
+.reward-card-text p{
+font-size:14px;
+}
+
+.reward-buttons{
+margin-left:0;
+flex-direction:column;
+width:100%;
+}
+
+.reward-card-button{
+margin-left:0;
+width:100%;
+text-align:center;
+}
+
+}
+
+.social-icon{
+width:26px;
+height:26px;
+object-fit:contain;
+filter:brightness(0) invert(1);
+transition:0.3s;
+}
+
+.social-icon:hover{
+transform:scale(1.1);
+}
+
+.reward-item{
+position:relative;
+background:#0a0a0a;
+border-radius:10px;
+padding:12px;
+border:1px solid rgba(255,255,255,0.08);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+transition:0.3s;
+overflow:hidden;
+}
 
 /* cena */
 
@@ -197,16 +1039,16 @@ NAGRODY DO WYGRANIA
 <div class="reward-gallery">
 
 <div class="reward-item won">
-<img src="surv.png">
-<span>Survival Knife</span>
-<div class="skin-price">440zł</div>
+<img src="seke.png">
+<span>Skeleton Crimson Web</span>
+<div class="skin-price">1800zł</div>
 <div class="won-label">WYLOSOWANE</div>
 </div>
 
 <div class="reward-item">
-<img src="glove2.png">
-<span>Rękawice 3rd Commando</span>
-<div class="skin-price">480zł</div>
+<img src="seke.png">
+<span>Skeleton Crimson Web</span>
+<div class="skin-price">1800zł</div>
 <div class="won-label">WYLOSOWANE</div>
 </div>
 
